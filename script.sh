@@ -10,7 +10,8 @@ apt install gh git -y
 # Insure logged into gh
 gh auth login
 
-if ($installMode) {
+if [ $installMode == true] 
+then
     # install foxdot
     echo "Installing FoxDot"
     cd $currentDir
@@ -23,17 +24,10 @@ if ($installMode) {
     echo "Installing SuperCollider"
     apt install supercollider -y
     echo "Installed SuperCollider, Please continue quark install and start script setup manually!"
+fi 
     # install Troop
     echo "Installing Troop"
     cd $currentDir
     apt install python-tk -y
     gh repo clone Qirky/Troop
     echo "Installed Troop"
-} else {
-    # install Troop
-    echo "Installing Troop"
-    cd $currentDir
-    apt install python-tk -y
-    gh repo clone Qirky/Troop
-    echo "Installed Troop"
-}
