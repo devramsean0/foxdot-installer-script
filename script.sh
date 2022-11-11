@@ -28,6 +28,6 @@ fi
     # install Troop
     echo "Installing Troop"
     cd $currentDir
-    apt install python-tk -y
+    apt install python3-tk -y
     gh repo clone Qirky/Troop
     echo "Installed Troop"
