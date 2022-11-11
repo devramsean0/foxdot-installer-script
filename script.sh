@@ -6,7 +6,7 @@ installMode=$1 || false
 currentDir=$pwd
 echo 'Ensuring GH is happy!'
 # Ensure gh CLI is installed
-apt install gh -y
+apt install gh git -y
 # Insure logged into gh
 gh auth login
 
