@@ -6,7 +6,7 @@ installMode=$1 || false
 currentDir=$pwd
 echo 'Ensuring GH is happy!'
 # Ensure gh CLI is installed
-apt install gh git -y
+sudo apt install gh git -y
 # Insure logged into gh
 gh auth login
 
@@ -22,12 +22,12 @@ then
     echo "Installed FoxDot"
     # install SuperCollider
     echo "Installing SuperCollider"
-    apt install supercollider -y
+    sudo apt install supercollider -y
     echo "Installed SuperCollider, Please continue quark install and start script setup manually!"
 fi 
     # install Troop
     echo "Installing Troop"
     cd $currentDir
-    apt install python3-tk -y
+    sudo apt install python3-tk -y
     gh repo clone Qirky/Troop
     echo "Installed Troop"
